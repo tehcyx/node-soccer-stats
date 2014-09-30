@@ -77,7 +77,25 @@ router.param('name', function(req, res, next, name) {
 
 router.get('/', function(req, res) {
 	//res.send('hello world');
-	res.render('index', { title: 'Soccer DB' });
+	res.render('index', {
+		pageTitle: 'Soccer DB',
+		players: [
+				{
+					rank: 1,
+					name: "daniel",
+					games: 2,
+					points: 10,
+					goals: 5
+				},
+				{
+					rank: 2,
+					name: "carter",
+					games: 2,
+					points: 0,
+					goals: 0
+				}
+			]
+		});
 });
 
 router.post('/:homeId/:awayId/:result', function(req, res) {

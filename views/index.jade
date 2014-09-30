@@ -21,6 +21,25 @@ head
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
   body
     h3= pageTitle
+
+
+    table.table.table-striped.table-condensed
+      thead
+        td rank
+        td name
+        td games
+        td points
+        td goals
+      tbody
+        for player in players
+          tr
+            td= player.rank
+            td= player.name
+            td= player.games
+            td= player.points
+            td= player.goals
+
+
     table.table.table-striped.table-condensed
       thead
         th
